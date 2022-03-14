@@ -1,0 +1,23 @@
+# Ignore ipynb_checkpoints
+.ipynb_checkpoints
+
+# Ignore Cleveland files
+./cleveland/capstone-eda-2018-cleveland.ipynb
+./cleveland/capstone-eda-2019-cleveland.ipynb
+./cleveland/capstone-eda-2020-cleveland.ipynb
+
+# Ignore Tampa files
+./tampa/capstone-eda-2018-tampa.ipynb
+./tampa/capstone-eda-2019-tampa.ipynb
+./tampa/capstone-eda-2020-tampa.ipynb
+
+# Ignore scrap files
+./scrap/*
+scrap/
+
+# Ignore data files
+./data/*.csv
+
+data
+
+data/
