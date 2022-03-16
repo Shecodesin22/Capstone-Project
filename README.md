@@ -33,16 +33,13 @@ Farxiga, a drug to treat Type 2 diabetes and heart failure and chronic kidney di
 Invokana (a 3rd line drug to treat diabetes), Entresto (a fixed dose drug to treat heart failure), Chantix (a smoking cessation drug) and Murbetriq (an overactive bladder control drug)  all had lower model RMSEs that the former 3 drugs and had somewhat better predictions for 2020 payments.  However, it is recommended that other machine learning models be built with other types of data (including other drug payments/presences) to do a more accurate job of future predictions.
 
 #### Folders:
-I: Scrap
-- Unpolished, draft code.  Please ignore.
-
-II: Ohio
+I: Ohio
 - Please start with these files to replicate this analysis.  These files are the building blocks for the analysis.  For more details, see the immediate next section.
 
 #### Files & Reproducing This Analysis:
 Please start with the files located in the Ohio folder, with the number "00xxx".  You will need to download the respect year's general payments file from the CMS website listed under Data Source to gather Ohio data to build the analytical file.  I recommend only downloading one file at a time from the CMS website and zipping it or deleting it after you are finished to conserve space on your computer.
 
-After you have completed downloading the data and have obtained data for Ohio, you can contnue to run the files in the numbered order that they appear in this directory.
+After you have completed downloading the data and have obtained data for Ohio, you can continue to run the files in the numbered order that they appear in this main directory (outside of the Ohio folder, where this README file is located).
 #### Data Source:
 The data for this project was pulled from the general payments data files for each year of 2013- 2020 found at the Centers for Medicare and Medicaid Services website (https://www.cms.gov/OpenPayments/Data/Dataset-Downloads).  These data files had most recently been updated as of 1/21/22.  The data for 2021 will not be released until June 2022.
 
@@ -60,12 +57,16 @@ Victoza, Levemir and Toujeo had no 2020 Cincinnati physician payments and were e
 
 Farxiga had a huge spike in 2020 payments because it was considered a potential treatment for COVID to prevent major organs in the body from shutting down.
 
+Please see the Capstone Presentation.pdf for graphs showing the time series distributions for each of the 7 most common drugs/biologics.
+
 ### Modeling
 Eleven time series models were built for the daily aggregated payments for each of the 7 most common drugs/biologics.  These models were not deemed to be as good as the models based on the monthly aggregated payments, and so will not be discussed.
 
 Ten time series models were built for the weeky aggregated payments for each of the 7 most common drugs/biologics.  These models were not deemed to be as good as the models based on the monthly aggregated payments, and so will not be discussed.
 
 Eighteen time series models were built for the monthly aggregated payments for each of the 7 most common drugs/biologics.  These included a simple mean baseline model, a simple expontential smoothing model, 4 seasonal baseline shift models based on 4,6, 12, and 18 time periods, 4 Holt-Winters multiplicative models built on those same 4 time periods, 4 Holt-Winters additive models built on those same 4 time periods, and 4 SARIMA models built on those 4 time periods.
+
+Please see the Capstone Presentation.pdf for the RMSE details of the final 18 models for each of the 7 most common drugs/biologics.
 
 #### Limitations
 COVID radically impacted medical behavior and medical supply chains and healthcare services.  Therefore, using historical payment data is not the most optimal method to predict 2020 Cincinnati CMS physician payments.
